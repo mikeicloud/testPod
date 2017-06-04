@@ -12,6 +12,7 @@
 		275B4ED91EE3C41400B009A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275B4ED71EE3C41400B009A1 /* Main.storyboard */; };
 		275B4EDB1EE3C41400B009A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 275B4EDA1EE3C41400B009A1 /* Assets.xcassets */; };
 		275B4EDE1EE3C41400B009A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275B4EDC1EE3C41400B009A1 /* LaunchScreen.storyboard */; };
+		275B4EEB1EE3D07B00B009A1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B4EEA1EE3D07B00B009A1 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		275B4EDA1EE3C41400B009A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		275B4EDD1EE3C41400B009A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		275B4EDF1EE3C41400B009A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		275B4EE81EE3D07A00B009A1 /* testPod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testPod-Bridging-Header.h"; sourceTree = "<group>"; };
+		275B4EE91EE3D07B00B009A1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		275B4EEA1EE3D07B00B009A1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		275B4ED21EE3C41400B009A1 /* testPod */ = {
 			isa = PBXGroup;
 			children = (
+				275B4EE71EE3D05900B009A1 /* Classes */,
 				275B4ED31EE3C41400B009A1 /* AppDelegate.swift */,
 				275B4ED51EE3C41400B009A1 /* ViewController.swift */,
 				275B4ED71EE3C41400B009A1 /* Main.storyboard */,
@@ -62,6 +67,16 @@
 				275B4EDF1EE3C41400B009A1 /* Info.plist */,
 			);
 			path = testPod;
+			sourceTree = "<group>";
+		};
+		275B4EE71EE3D05900B009A1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				275B4EE91EE3D07B00B009A1 /* Person.h */,
+				275B4EEA1EE3D07B00B009A1 /* Person.m */,
+				275B4EE81EE3D07A00B009A1 /* testPod-Bridging-Header.h */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +111,7 @@
 				TargetAttributes = {
 					275B4ECF1EE3C41400B009A1 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275B4EEB1EE3D07B00B009A1 /* Person.m in Sources */,
 				275B4ED61EE3C41400B009A1 /* ViewController.swift in Sources */,
 				275B4ED41EE3C41400B009A1 /* AppDelegate.swift in Sources */,
 			);
@@ -260,10 +277,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = testPod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wxk.testPod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testPod/Classes/testPod-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +292,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = testPod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wxk.testPod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testPod/Classes/testPod-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +321,7 @@
 				275B4EE41EE3C41400B009A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
